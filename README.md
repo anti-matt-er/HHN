@@ -127,7 +127,7 @@ STREETS
 **`INFO <Info>`**
 - This line is entirely optional
 - Each tag is optional, as is the order, with the exception of `INFO` which *must* come after all other tags
-- `DATE` denotes the date time the game/hand started at Preflop, *must* be followed by a valid [ISO 8601][https://en.wikipedia.org/wiki/ISO_8601] timestamp in the format `YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`
+- `DATE` denotes the date time the game/hand started at Preflop, *must* be followed by a valid [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) timestamp in the format `YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`
 - `CASH` denotes a cash game, *must* be followed by a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#Active_codes) `<Currency>` code
 - `LVL` denotes a tournament gane, *must* be followed by current level # of tournament
 - `BUY` denotes the buy-in
