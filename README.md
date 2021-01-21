@@ -105,12 +105,12 @@ STREETS
 ### GAME
 **`NLH {Bets} {Seats}`**
 - *Must* start with `NLH` characters followed by a space
-- **{Bets}**
+- **{Bets}**\
 	**`[Ante]|[Small Blind]|<Big Blind>`**
 	- Bets format can be `A|SB|BB`, `SB|BB` or just `BB`
 	- `[Small Blind]` is assumed to be 1/2 of `<Big Blind>` if omitted
 	- If using `[Ante]`, `[Small Blind]` *must* be specified
-- **{Seats}**
+- **{Seats}**\
 	**`BTN <Dealer>/<Seats>/[Max]`**
 	**`<Seats>/[Max]`**
 	- Seats format can be `BTN Dealer/Seats/Max`, `BTN Dealer/Seats`, `Seats/Max` or just `Seats`
@@ -143,7 +143,7 @@ STREETS
 - This line is entirely optional
 - `=` denotes player's real name or username/handle
 - `<Name>` *must* be surrounded by double quotes
-- **Hero**
+- **Hero**\
 	**`<Seat/Position>=HERO`**
 	- *may* be used to signify that the indicated player is the Hero (owner of the hand history)
 	- `HERO` *must* be in all-caps, and *must not* be surrounded by double quotes to distinguish it from a name entry
@@ -159,15 +159,15 @@ STREETS
 - Chip amounts (without `B`) and remainders *must* be decimal in case of cash games
 
 ### STREETS
-**`#P {Actions...}`** 						*Preflop*
-**`#F{Cards} {Actions...}`** 				*Flop*
-**`#T{Card} {Actions...}`** 				*Turn*
-**`#R{Card} {Actions...}`** 				*River*
-**`#S {Payouts...} {Winning Hands...}`** 	*Showdown*
-**`#E {Payout}`** 							*End before showdown (All Fold)*
+**`#P {Actions...}`** 						*Preflop*\
+**`#F{Cards} {Actions...}`** 				*Flop*\
+**`#T{Card} {Actions...}`** 				*Turn*\
+**`#R{Card} {Actions...}`** 				*River*\
+**`#S {Payouts...} {Winning Hands...}`** 	*Showdown*\
+**`#E {Payout}`** 							*End before showdown (All Fold)*\
 - `#P` is mandatory, there cannot be a hand without Preflop
 - Either `#S` or `#E` *must* be present, there must be a logical end to the hand
-- **{Card(s)}**
+- **{Card(s)}**\
 	**`[<Rank><Suit> <Rank><Suit> <Rank><Suit>]`**
 	**`[<Rank><Suit> <Rank><Suit>]`**
 	**`[<Rank><Suit>]`**
@@ -176,7 +176,7 @@ STREETS
 	- `<Suit>` *must* be a valid suit, see **Values -> Suits**
 	- Can only contain 3 cards (preflop), 2 cards (player hands), or 1 card (river, turn)
 	- Optional space between each card
-- **{Actions}**
+- **{Actions}**\
 	**`<Seat/Position>:<Action>[Amount]`** *(Multiple)*
 	- There *must* be a space between each player's action
 	- If preflop, any omissions are assumed to indicate that the omitted players have folded
@@ -190,23 +190,23 @@ STREETS
 		- `R` is **Raise**, amount *must* be present
 		- `X` is **Fold**, amount *must not* be present
 	- Amount can be `A` for all-in, or a chip amount (see **{Stacks}** for format). These can be combined if it desired to show both
-	- **Early Showdown**
+	- **Early Showdown**\
 		**`<Seat/Position>{Cards}`**
 		- An optional *pseudo* action can be used to signify a player showing their hand
 		- Even if this is omitted, the parser should use any and all information from the `#S` or `#E` sections to reveal the same information, if present
 		- See **{Card(s)}** for cards format
-- **{Payout(s)}**
+- **{Payout(s)}**\
 	**`<Seat/Position>=<Pot>`** *(Multiple)*
 	- `=` denotes player's chips
 	- `<Pot>` can be `P` or `POT` if the specific amount is unimportant or to be calculated by the parser, or a chip amount (see **{Stacks}** for format). These *must not* be combined
-- **{Winning Hands}**
+- **{Winning Hands}**\
 	**`<Seat/Position>{Cards}<Hand ID>{Kickers}`** *(Multiple)*
 	- *Must* show at minimum all winners of the pot
 	- Any additional entries reveal other seat's hole cards
 	- If an omitted player was still in play by showdown, this means they mucked their cards
 	- See **{Card(s)}** for cards format
 	- `<Hand ID>` *must* be a valid winning hand, see **Values -> Hands**
-	- **{Kickers}**:
+	- **{Kickers}**\
 		**`+<Rank><Rank><Rank>`**
 		**`+<Rank><Rank>`**
 		**`+<Rank>`**
