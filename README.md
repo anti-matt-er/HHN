@@ -107,12 +107,11 @@ STREETS
 ### General
 - All lines are mandatory with the exception of INFO and NAMES which are optional
 - The order of lines *must* follow the order shown above, with the exception of NAMES and STACKS which may be swapped around
-- *Spaces* and *New Lines* are interchangable, with the following caveats:
-	- There *must* be a new line after GAME and INFO
-	- There *must not* be any new lines when listing cards in a hand or a street, spaces are optional
-	- There *must not* be any new lines within the text after the `INFO` tag of INFO
-	- Parsers *must* allow any variant of new line from any OS and treat them as a single whitespace character
+- *Spaces* and *New Lines* are completely interchangable
+- Parsers *must* allow any variant of new line from any OS and treat them as a single whitespace character
+- Parsers *must* treat multiple consecutive whitespace characters as a single space
 - Comments are made with the `;` character and are permitted anywhere where there is whitespace and are terminated by a new line
+	- Therefore, parsers *must* eliminate comments before handling the rest of the hand
 - Until this specification is expanded to other Poker variants, every *PSN* hand *must* start with `NLH` as the first 3 bytes
 
 ### Reading this specification
@@ -121,6 +120,7 @@ STREETS
 	- `[...]` denotes an optional field
 	- `{...}` denotes a field to be formatted according to its corresponding section in this specification
 - All other characters outside of the above delimiters *must be written verbatim*
+- Any string delimited by double quotes may use the `\` character to escape `"` characters if desired within this string, for example: `UTG="Dan \"The Man\""`
 
 ### GAME
 **`NLH {Bets} {Seats}`**
@@ -137,14 +137,13 @@ STREETS
 	- `BTN` followed by a space denotes BTN notation
 	- BTN notation means players *must* be identified by their seat number
 	- If not using BTN notation, players *must* be identified by their position, see **Values > Positions**
-- *Mandatory* new line after end of line
 
 ### INFO
 **`DATE <Date>`**
 **`CASH <Currency>`**
 **`LVL <Level>`**
 **`BUY <Amount>[Currency]`**
-**`INFO <Info>`**
+**`INFO "<Info>"`**
 - This line is entirely optional
 - Each tag is optional, as is the order, with the exception of `INFO` which *must* come after all other tags
 - `DATE` denotes the date time the game/hand started at Preflop, *must* be followed by a valid [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) timestamp in the format `YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`
@@ -155,8 +154,8 @@ STREETS
 	- *May* be followed by a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#Active_codes) `[Currency]` code
 		- `[Currency]` required if game is tournament
 		- If `[Currency]` is present and the `CASH` tag is not, this indicates a cash game (to save specifying the currency twice)
-- `INFO` denotes any information about the game that does not have a bearing on how the hand is played, followed by any text with the exception of `;` and new lines
-- *Mandatory* new line after end of line
+- `INFO` denotes any information about the game that does not have a bearing on how the hand is played, followed by any text
+	- `<Info>` *must* be surrounded by double quotes and can contain any text
 
 ### NAMES
 **`<Seat/Position>="<Name>"`** *(Multiple)*
