@@ -116,7 +116,7 @@ STREETS
 	- Seats format can be `BTN Dealer/Seats/Max`, `BTN Dealer/Seats`, `Seats/Max` or just `Seats`
 	- `BTN` followed by a space denotes BTN notation
 	- BTN notation means players *must* be identified by their seat number
-	- If not using BTN notation, players *must* be identified by their position, see **Values -> Positions**
+	- If not using BTN notation, players *must* be identified by their position, see **values > Positions**
 - *Mandatory* new line after end of line
 
 ### INFO
@@ -145,7 +145,7 @@ STREETS
 - `<Name>` *must* be surrounded by double quotes
 - **Hero**\
 	**`<Seat/Position>=HERO`**
-	- *may* be used to signify that the indicated player is the Hero (owner of the hand history)
+	- *May* be used to signify that the indicated player is the Hero (owner of the hand history)
 	- `HERO` *must* be in all-caps, and *must not* be surrounded by double quotes to distinguish it from a name entry
 	- This *may* be present with or without the corresponding player's name entry
 
@@ -159,12 +159,12 @@ STREETS
 - Chip amounts (without `B`) and remainders *must* be decimal in case of cash games
 
 ### STREETS
-**`#P {Actions...}`** 						*Preflop*\
-**`#F{Cards} {Actions...}`** 				*Flop*\
-**`#T{Card} {Actions...}`** 				*Turn*\
-**`#R{Card} {Actions...}`** 				*River*\
-**`#S {Payouts...} {Winning Hands...}`** 	*Showdown*\
-**`#E {Payout}`** 							*End before showdown (All Fold)*\
+**`#P {Actions}`** *Preflop*\
+**`#F{Cards} {Actions}`** *Flop*\
+**`#T{Card} {Actions}`** *Turn*\
+**`#R{Card} {Actions}`** *River*\
+**`#S {Payouts} {Winning Hands}`** *Showdown*\
+**`#E {Payout}`** *End before showdown (All Fold)*
 - `#P` is mandatory, there cannot be a hand without Preflop
 - Either `#S` or `#E` *must* be present, there must be a logical end to the hand
 - **{Card(s)}**\
@@ -172,8 +172,8 @@ STREETS
 	**`[<Rank><Suit> <Rank><Suit>]`**
 	**`[<Rank><Suit>]`**
 	- *Must* be enclosed in Square Brackets (these do not denote optional parameters like elsewhere in the document)
-	- `<Rank>` *must* be a valid rank, see **Values -> Ranks**
-	- `<Suit>` *must* be a valid suit, see **Values -> Suits**
+	- `<Rank>` *must* be a valid rank, see **values > Ranks**
+	- `<Suit>` *must* be a valid suit, see **values > Suits**
 	- Can only contain 3 cards (preflop), 2 cards (player hands), or 1 card (river, turn)
 	- Optional space between each card
 - **{Actions}**\
@@ -205,13 +205,13 @@ STREETS
 	- Any additional entries reveal other seat's hole cards
 	- If an omitted player was still in play by showdown, this means they mucked their cards
 	- See **{Card(s)}** for cards format
-	- `<Hand ID>` *must* be a valid winning hand, see **Values -> Hands**
+	- `<Hand ID>` *must* be a valid winning hand, see **values > Hands**
 	- **{Kickers}**\
 		**`+<Rank><Rank><Rank>`**
 		**`+<Rank><Rank>`**
 		**`+<Rank>`**
 		- `+` denotes the rank of one or more kicker cards that came into decision
-		- `<Rank>` *must* be a valid rank, see **Values -> Ranks**
+		- `<Rank>` *must* be a valid rank, see **values > Ranks**
 
 ### Values
 
