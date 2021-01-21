@@ -116,7 +116,7 @@ STREETS
 	- Seats format can be `BTN Dealer/Seats/Max`, `BTN Dealer/Seats`, `Seats/Max` or just `Seats`
 	- `BTN` followed by a space denotes BTN notation
 	- BTN notation means players *must* be identified by their seat number
-	- If not using BTN notation, players *must* be identified by their position, see **values > Positions**
+	- If not using BTN notation, players *must* be identified by their position, see **Values > Positions**
 - *Mandatory* new line after end of line
 
 ### INFO
@@ -172,8 +172,8 @@ STREETS
 	**`[<Rank><Suit> <Rank><Suit>]`**
 	**`[<Rank><Suit>]`**
 	- *Must* be enclosed in Square Brackets (these do not denote optional parameters like elsewhere in the document)
-	- `<Rank>` *must* be a valid rank, see **values > Ranks**
-	- `<Suit>` *must* be a valid suit, see **values > Suits**
+	- `<Rank>` *must* be a valid rank, see **Values > Ranks**
+	- `<Suit>` *must* be a valid suit, see **Values > Suits**
 	- Can only contain 3 cards (preflop), 2 cards (player hands), or 1 card (river, turn)
 	- Optional space between each card
 - **{Actions}**\
@@ -205,13 +205,13 @@ STREETS
 	- Any additional entries reveal other seat's hole cards
 	- If an omitted player was still in play by showdown, this means they mucked their cards
 	- See **{Card(s)}** for cards format
-	- `<Hand ID>` *must* be a valid winning hand, see **values > Hands**
+	- `<Hand ID>` *must* be a valid winning hand, see **Values > Hands**
 	- **{Kickers}**\
 		**`+<Rank><Rank><Rank>`**
 		**`+<Rank><Rank>`**
 		**`+<Rank>`**
 		- `+` denotes the rank of one or more kicker cards that came into decision
-		- `<Rank>` *must* be a valid rank, see **values > Ranks**
+		- `<Rank>` *must* be a valid rank, see **Values > Ranks**
 
 ### Values
 
