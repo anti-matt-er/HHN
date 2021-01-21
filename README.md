@@ -43,12 +43,23 @@ NLH 200 BTN 3/7/10
 **Example 2**
 ```
 NLH 100|200 7
+DATE 2021-01-21T18:15:00Z LVL 4 BUY 5.00USD
+BTN="TheNuts2832"
+SB="the_donkey"
+BB="Aceiraptor"
+UTG="anti-matt-er"
+U+1="Und3rd0g"
+U+2="nit1989"
+CO="bigmoney00"
+UTG=HERO
 BTN=3210 SB=6B BB=2000 UTG=12B U+1=8B199 U+2=9B25 CO=4045 
-#P UTG:R3B U+1:X U+2:X CO:X BTN:X SB:RA BB:C UTG:CA
-#F[7h 2h 5s] BB:C UTG:RA BB:X UTG[Qd Ah] BB[Jd Ac]
-#T[5d]
-#R[4d]
-#S UTG=3850 UTG[Qd Ah]PA+AQ
+#P
+UTG:R3B U+1:X U+2:X CO:X BTN:X SB:RA BB:C UTG:CA
+#F[7♥ 2♥ 5♠]
+BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
+#T[5♦]
+#R[4♦]
+#S UTG=3850 UTG[Q♦ A♥]PA+AQ
 ```
 
 Example 1 (and therefore Example 2) can be broken down as follows:
