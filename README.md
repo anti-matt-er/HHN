@@ -44,6 +44,7 @@ NLH 200 BTN 3/7/10
 ```
 NLH 100|200 7
 DATE 2021-01-21T18:15:00Z LVL 4 BUY 5.00USD
+
 BTN="TheNuts2832"
 SB="the_donkey"
 BB="Aceiraptor"
@@ -51,14 +52,21 @@ UTG="anti-matt-er"
 U+1="Und3rd0g"
 U+2="nit1989"
 CO="bigmoney00"
+
 UTG=HERO
-BTN=3210 SB=6B BB=2000 UTG=12B U+1=8B199 U+2=9B25 CO=4045 
+
+BTN=3210 SB=6B BB=2000 UTG=12B U+1=8B199 U+2=9B25 CO=4045
+
 #Preflop
 UTG:R3B U+1:X U+2:X CO:X BTN:X SB:RA BB:C UTG:CA
+
 #Flop[7♥ 2♥ 5♠]
 BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
+
 #Turn[5♦]
+
 #River[4♦]
+
 #Showdown
 UTG WIN 3850 UTG[Q♦ A♥]PA+AQ
 ```
