@@ -73,7 +73,7 @@ UTG WIN 3850 UTG[Q♦ A♥]PA+AQ
 
 Example 1 (and therefore Example 2) can be broken down as follows:
 ```
-NLH 200 BTN 3/7/10	;No Limit Hold'em, 7 out of 10 possible seats taken, ante is 25, small blind is 100 big blind is 200, Seat #3 is the BTN
+NLH 200 BTN 3/7/10	;Big Blind is 200, Small Blind is 100, Seat #3 is the dealer, 7/10 seats taken
 4=6B			;SB has 1200 chips
 5=10B			;BB has 2000 chips
 6=12B			;UTG has 2400 chips
