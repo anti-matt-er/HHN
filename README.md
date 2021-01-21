@@ -49,16 +49,16 @@ BTN="TheNuts2832"
 SB="the_donkey"
 BB="Aceiraptor"
 UTG="anti-matt-er"
-U+1="Und3rd0g"
-U+2="nit1989"
+UTG+1="Und3rd0g"
+MP="nit1989"
 CO="bigmoney00"
 
 UTG=HERO
 
-BTN=3210 SB=6B BB=2000 UTG=12B U+1=8B199 U+2=9B25 CO=4045
+BTN=3210 SB=6B BB=2000 UTG=12B UTG+1=8B199 MP=9B25 CO=4045
 
 #Preflop
-UTG:R3B U+1:X U+2:X CO:X BTN:X SB:RA BB:C UTG:CA
+UTG:R3B UTG+1:X MP:X CO:X BTN:X SB:RA BB:C UTG:CA
 
 #Flop[7♥ 2♥ 5♠]
 BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
