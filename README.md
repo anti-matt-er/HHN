@@ -53,13 +53,14 @@ U+2="nit1989"
 CO="bigmoney00"
 UTG=HERO
 BTN=3210 SB=6B BB=2000 UTG=12B U+1=8B199 U+2=9B25 CO=4045 
-#P
+#Preflop
 UTG:R3B U+1:X U+2:X CO:X BTN:X SB:RA BB:C UTG:CA
-#F[7♥ 2♥ 5♠]
+#Flop[7♥ 2♥ 5♠]
 BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
-#T[5♦]
-#R[4♦]
-#S UTG WIN 3850 UTG[Q♦ A♥]PA+AQ
+#Turn[5♦]
+#River[4♦]
+#Showdown
+UTG WIN 3850 UTG[Q♦ A♥]PA+AQ
 ```
 
 Example 1 (and therefore Example 2) can be broken down as follows:
@@ -170,14 +171,15 @@ STREETS
 - Chip amounts (without `B`) and remainders *must* be decimal in case of cash games
 
 ### STREETS
-**`#P {Actions}`** *Preflop*\
-**`#F{Cards} {Actions}`** *Flop*\
-**`#T{Card} {Actions}`** *Turn*\
-**`#R{Card} {Actions}`** *River*\
-**`#S {Payouts} {Winning Hands}`** *Showdown*\
-**`#E {Payout}`** *End before showdown (All Fold)*
-- `#P` is mandatory, there cannot be a hand without Preflop
-- Either `#S` or `#E` *must* be present, there must be a logical end to the hand
+**`#P {Actions}`** or **`#Preflop {Actions}`**\
+**`#F{Cards} {Actions}`** or **`#Flop{Cards} {Actions}`**\
+**`#T{Card} {Actions}`** or **`#Turn{Card} {Actions}`**\
+**`#R{Card} {Actions}`** or **`#River{Card} {Actions}`**\
+**`#S {Payouts} {Winning Hands}`** or **`#Showdown {Payouts} {Winning Hands}`**\
+**`#E {Payout}`** or **`#End {Payout}`**
+- `#P`/`#Preflop` is mandatory, there cannot be a hand without Preflop
+- `#E`/`#End` denotes end before showdown (All Fold)*
+- Either `#S`/`#Showdown` or `#E`/`#End` *must* be present, there must be a logical end to the hand
 - **{Card(s)}**\
 	**`[<Rank><Suit> <Rank><Suit> <Rank><Suit>]`**
 	**`[<Rank><Suit> <Rank><Suit>]`**
@@ -204,7 +206,7 @@ STREETS
 	- **Early Showdown**\
 		**`<Seat/Position>{Cards}`**
 		- An optional *pseudo* action can be used to signify a player showing their hand
-		- Even if this is omitted, the parser should use any and all information from the `#S` or `#E` sections to reveal the same information, if present
+		- Even if this is omitted, the parser should use any and all information from the `#S`/`#Showdown` or `#E`/`#End` sections to reveal the same information, if present
 		- See **{Card(s)}** for cards format
 - **{Payout(s)}**\
 	**`<Seat/Position> WIN <Pot>`** *(Multiple)*
