@@ -37,7 +37,7 @@ NLH 200 BTN 3/7/10
 #F[7h2h5s] 5:C 6:RA 5:X
 #T[5d]
 #R[4d]
-#S 4=P 4[QdAh]PA+AQ 6[JdAc]PA+AJ
+#S 4 WIN P 4[QdAh]PA+AQ 6[JdAc]PA+AJ
 ```
 
 **Example 2**
@@ -59,7 +59,7 @@ UTG:R3B U+1:X U+2:X CO:X BTN:X SB:RA BB:C UTG:CA
 BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
 #T[5♦]
 #R[4♦]
-#S UTG=3850 UTG[Q♦ A♥]PA+AQ
+#S UTG WIN 3850 UTG[Q♦ A♥]PA+AQ
 ```
 
 Example 1 (and therefore Example 2) can be broken down as follows:
@@ -80,7 +80,7 @@ NLH 200 BTN 3/7/10	;No Limit Hold'em, 7 out of 10 possible seats taken, ante is 
 #T[5d]			;Turn goes 5d, board is 7h 2h 5s 5d
 #R[4d]			;River goes 4d, board is 7h 2h 5s 5d 4d
 #S			;Showdown
-4=P			;SB is awarded pot worth 3850
+4 WIN P			;SB is awarded pot worth 3850
 4[QdAh]PA+AQ		;SB shows Qd Ah - hand is pair with Ace and Queen kickers
 6[JdAc]PA+AJ		;UTG shows Jd Ac - hand is pair with Ace and Jack kickers
 ```
@@ -207,8 +207,8 @@ STREETS
 		- Even if this is omitted, the parser should use any and all information from the `#S` or `#E` sections to reveal the same information, if present
 		- See **{Card(s)}** for cards format
 - **{Payout(s)}**\
-	**`<Seat/Position>=<Pot>`** *(Multiple)*
-	- `=` denotes player's chips
+	**`<Seat/Position> WIN <Pot>`** *(Multiple)*
+	- `WIN` denotes player's chips
 	- `<Pot>` can be `P` or `POT` if the specific amount is unimportant or to be calculated by the parser, or a chip amount (see **{Stacks}** for format). These *must not* be combined
 - **{Winning Hands}**\
 	**`<Seat/Position>{Cards}<Hand ID>{Kickers}`** *(Multiple)*
