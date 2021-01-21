@@ -54,22 +54,22 @@ BTN=3210 SB=6B BB=2000 UTG=12B U+1=8B199 U+2=9B25 CO=4045
 Example 1 (and therefore Example 2) can be broken down as follows:
 ```
 NLH 200 BTN 3/7/10	;No Limit Hold'em, 7 out of 10 possible seats taken, ante is 25, small blind is 100 big blind is 200, Seat #3 is the BTN
-4=6B				;SB has 1200 chips
-5=10B				;BB	has 2000 chips
-6=12B				;UTG has 2400 chips
-#P					;Preflop, start of the game
-6:R3B				;UTG raises 3 big blinds
-4:RA				;SB raises 6 big blinds and is all-in
-5:C					;BB calls 6 big blinds
-6:C					;UTG calls 6 big blinds
-#F[7h2h5s]			;Flop goes 7h 2h 5s
-5:C					;BB checks
-6:RA				;UTG raises 6 big blinds and is all-in
-5:X					;BB folds
-#T[5d]				;Turn goes 5d, board is 7h 2h 5s 5d
-#R[4d]				;River goes 4d, board is 7h 2h 5s 5d 4d
-#S					;Showdown
-4=P					;SB is awarded pot worth 3850
+4=6B			;SB has 1200 chips
+5=10B			;BB has 2000 chips
+6=12B			;UTG has 2400 chips
+#P			;Preflop, start of the game
+6:R3B			;UTG raises 3 big blinds
+4:RA			;SB raises 6 big blinds and is all-in
+5:C			;BB calls 6 big blinds
+6:C			;UTG calls 6 big blinds
+#F[7h2h5s]		;Flop goes 7h 2h 5s
+5:C			;BB checks
+6:RA			;UTG raises 6 big blinds and is all-in
+5:X			;BB folds
+#T[5d]			;Turn goes 5d, board is 7h 2h 5s 5d
+#R[4d]			;River goes 4d, board is 7h 2h 5s 5d 4d
+#S			;Showdown
+4=P			;SB is awarded pot worth 3850
 4[QdAh]PA+AQ		;SB shows Qd Ah - hand is pair with Ace and Queen kickers
 6[JdAc]PA+AJ		;UTG shows Jd Ac - hand is pair with Ace and Jack kickers
 ```
