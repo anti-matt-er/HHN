@@ -135,6 +135,7 @@ STREETS
 	**`<Seats>/[Max]`**
 	- Seats format can be `BTN Dealer/Seats/Max`, `BTN Dealer/Seats`, `Seats/Max` or just `Seats`
 	- `BTN` followed by a space denotes BTN notation
+	- If BTN notation is used, `<Dealer>` should identify the Button's seat number; all other positions are calculated from this
 	- BTN notation means players *must* be identified by their seat number
 	- If not using BTN notation, players *must* be identified by their position, see **Values > Positions**
 
