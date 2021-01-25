@@ -10,7 +10,7 @@ Currently, there is no widely-used standard and every network uses their own pro
 To facilitate this, this specification and its implementation is hereby released open source under the **MIT License** so that any individual, network or other entity may adopt and improve upon it.
 
 ### Criticisms
-I've heard it said that the reason such a standard does not yet exist is that it would be more useful to bots and cheaters than legitimate players, however it is my firm belief that this is an example of [Security Through Obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity) and therefore is *not* a valid reason for one to be created.
+I've heard it said that the reason such a standard does not yet exist is that it would be more useful to bots and cheaters than legitimate players, however it is my firm belief that this is an example of [Security Through Obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity) and therefore is *not* a valid reason against creating one.
 
 Putting it another way: it is entirely trivial for a malicious entity to create software that can parse the many proprietary formats used by poker networks and this is not a barrier to them, especially when the potential profit is so high. Proprietary formats therefore do not have a bearing on these entities; they will operate regardless.
 
