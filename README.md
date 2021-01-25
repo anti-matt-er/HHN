@@ -186,7 +186,7 @@ STREETS
 **`#S {Payouts} {Winning Hands}`** or **`#Showdown {Payouts} {Winning Hands}`**\
 **`#E {Payout}`** or **`#End {Payout}`**
 - `#P`/`#Preflop` is mandatory, there cannot be a hand without Preflop
-- `#E`/`#End` denotes end before showdown (All Fold)*
+- `#E`/`#End` denotes end before showdown (All Fold)
 - Either `#S`/`#Showdown` or `#E`/`#End` *must* be present, there must be a logical end to the hand
 - **{Card(s)}**\
 	**`[<Rank><Suit> <Rank><Suit> <Rank><Suit>]`**
