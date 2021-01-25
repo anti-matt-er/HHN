@@ -233,9 +233,9 @@ STREETS
 		- `+` denotes the rank of one or more kicker cards that came into decision
 		- `<Rank>` *must* be a valid rank, see **Values > Ranks**
 
-### Values
+## Values
 
-#### Positions:
+### Positions:
 - Dealer\
 	`BTN`, `OTB`, `BU` or `D`
 	- Offset 0 from Button
@@ -259,9 +259,9 @@ STREETS
 	- Offset -2 from Button (2 seats to the right)
 - Lojack\
 	`LJ` or `L`
-	- Offset -3 from button (3 seats to the right)
+	- Offset -3 from button (3 seats to the right)\
 The above are listed in order of priority; positions higher on this list takes precedent over lower where they refer to the same seat.
-##### Heads-up
+#### Heads-up
 When playing heads-up (2 seats in play), the positions work a little differently and are defined as follows:
 - Dealer\
 	`BTN`, `OTB`, `BU`, `D`\
@@ -270,9 +270,9 @@ When playing heads-up (2 seats in play), the positions work a little differently
 	- Offset 0 from Button
 - Big Blind\
 	`BB` or `B`
-	- Offset 1 from Button (only other seat)
+	- Offset 1 from Button (only other seat)\
 Note that the Button in this case is the small blind, and can be presented in the hand using either *Dealer* or *Small Blind* position identifiers.
-##### A note on Middle Position (MP)
+#### A note on Middle Position (MP)
 *PSN* **does not** support `MP` as a valid position identifier. The reason is as follows:
 There is no standard on the naming of positions; different networks, casinos/cardrooms and players use different terminologies. Fortunately, there *is* a clear definition for each position (based upon the distance from the Button, left or right), so they may all be used interchangably **with one exception**: The middle position (MP), its definition varies and therefore cannot be used in an unambiguous manner.
 Here are a few examples of how this position is used:
@@ -285,21 +285,21 @@ Here are a few examples of how this position is used:
 - `MP1, MP2` etc... can be used at any point after `UTG` or any `UTG+n` seat, for example `UTG, UTG+1, MP1, MP2` or `UTG, MP1, MP2, MP3`
 - As a more general point, the term *Middle Position* when referred to a *group* of seats is similarly not well defined
 	- If the Small Blind and Big Blind are grouped under "The Blinds", "Early Position" is the group after these seats and therefore "Middle Position" is later.
-	- If the Small Blind and Big Blind are grouped with Under the Gun as "Early Position", "Middle Position" is the group after these seats and therefore is earlier.
+	- If the Small Blind and Big Blind are grouped with Under the Gun as "Early Position", "Middle Position" is the group after these seats and therefore is earlier.\
 It would be a trivial matter to allow `MP` notation and simply treat these seats based upon context, however this has a few problems not immediately obvious:
 - *PSN* allows any seat that has folded Preflop to be omitted from hand. In this case, `MP` is a completely ambigious seat for reasons stated above.
 - Seat identifiers are two-way. They can be used in the notation of the *PSN* hand, but they can also be used to *retrieve* a seat from any software that parses *PSN*. Seat retrieval using position identifiers *must* work even when they are not present in the notation, so that a user that has a *PSN* hand using seat numbers could ask a parser to retrieve, for example, the seat at position `UTG`. Seeing as Under The Gun is clearly defined, this will pose no issue and will consistently retrieve the correct seat from any parser that follows this specification.\ If, however, a user asks for the seat at position `MP`, the parser may retrieve a seat that's inconsistent with how the *PSN* hand was written (for example, it could retrieve the Hijack when `MP` actually represented Under the Gun in the notation).
 A possible solution would be to *force* a standard on how Middle Position is represented, and only allow that in this specification. However, this would be problematic as players have already adopted their own definition, and a standard that goes against their definition may alienate them and hinder adoption of *PSN*.
 
-#### Ranks:
+### Ranks:
 - Valid values: `2 3 4 5 6 7 8 9 T J Q K A`
 - `10` *must not* be used in place of `T`
 
-#### Suits:
+### Suits:
 - Valid values: `c d h s` or `♣ ♦ ♥ ♠`
 - *Must* be lowercase if using letters
 
-#### Hands:
+### Hands:
 - Royal Flush:		`RF`
 - Straight Flush:	`SF`
 - Four of a Kind:	`4K`
