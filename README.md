@@ -89,9 +89,9 @@ NLH 200 BTN 3/7/10	;Big Blind is 200, Small Blind is 100, Seat #3 is the dealer,
 #T[5d]			;Turn goes 5d, board is 7h 2h 5s 5d
 #R[4d]			;River goes 4d, board is 7h 2h 5s 5d 4d
 #S			;Showdown
-6 WIN P			;SB is awarded pot worth 4400
-6[QdAh]PA+AQ		;SB shows Qd Ah - hand is pair with Ace and Queen kickers
-5[JdAc]PA+AJ		;UTG shows Jd Ac - hand is pair with Ace and Jack kickers
+6 WIN P			;UTG is awarded pot worth 4400
+6[QdAh]PA+AQ		;UTG shows Qd Ah - hand is pair with Ace and Queen kickers
+5[JdAc]PA+AJ		;BB shows Jd Ac - hand is pair with Ace and Jack kickers
 ```
 
 ## Specification
