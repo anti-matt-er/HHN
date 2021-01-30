@@ -37,7 +37,7 @@ NLH 200 BTN 3/7/10
 #F[7h2h5s] 5:C 6:RA 5:X
 #T[5d]
 #R[4d]
-#S 4 WIN P 4[QdAh]PA+AQ 6[JdAc]PA+AJ
+#S 6 WIN P 6[QdAh]PA+AQ 5[JdAc]PA+AJ
 ```
 
 **Example 2**
@@ -58,7 +58,7 @@ UTG=HERO
 BTN=3210 SB=6B BB=2000 UTG=12B UTG+1=8B199 HJ=9B25 CO=4045
 
 #Preflop
-UTG:R3B UTG+1:X HJ:X CO:X BTN:X SB:RA BB:C UTG:CA
+UTG:R3B UTG+1:X HJ:X CO:X BTN:X SB:RA BB:C UTG:C
 
 #Flop[7♥ 2♥ 5♠]
 BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
@@ -68,7 +68,7 @@ BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
 #River[4♦]
 
 #Showdown
-UTG WIN 3850 UTG[Q♦ A♥]PA+AQ
+UTG WIN 4400 UTG[Q♦ A♥]PA+AQ
 ```
 
 Example 1 (and therefore Example 2) can be broken down as follows:
@@ -89,9 +89,9 @@ NLH 200 BTN 3/7/10	;Big Blind is 200, Small Blind is 100, Seat #3 is the dealer,
 #T[5d]			;Turn goes 5d, board is 7h 2h 5s 5d
 #R[4d]			;River goes 4d, board is 7h 2h 5s 5d 4d
 #S			;Showdown
-4 WIN P			;SB is awarded pot worth 3850
-4[QdAh]PA+AQ		;SB shows Qd Ah - hand is pair with Ace and Queen kickers
-6[JdAc]PA+AJ		;UTG shows Jd Ac - hand is pair with Ace and Jack kickers
+6 WIN P			;SB is awarded pot worth 4400
+6[QdAh]PA+AQ		;SB shows Qd Ah - hand is pair with Ace and Queen kickers
+5[JdAc]PA+AJ		;UTG shows Jd Ac - hand is pair with Ace and Jack kickers
 ```
 
 ## Specification
