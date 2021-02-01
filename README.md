@@ -211,6 +211,7 @@ STREETS
 		- `R` is **Raise**, amount *must* be present
 		- `X` is **Fold**, amount *must not* be present
 	- Amount can be `A` for all-in, or a chip amount (see **{Stacks}** for format). These can be combined if it desired to show both
+	- When raising, `[Amount]` is the amount of the *raise itself*, not what the bet has been raised to. For example, if UTG raises 500 and the price of the big blind is 100, the bet is now 600: the starting bet was 100 and was raised by 500
 	- **Early Showdown**\
 		**`<Seat/Position>{Cards}`**
 		- An optional *pseudo* action can be used to signify a player showing their hand
