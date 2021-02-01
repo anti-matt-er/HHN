@@ -68,7 +68,7 @@ BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
 #River[4♦]
 
 #Showdown
-UTG WIN 4400 UTG[Q♦ A♥]PA+AQ
+UTG WIN 3600 UTG[Q♦ A♥]PA+AQ
 ```
 
 Example 1 (and therefore Example 2) can be broken down as follows:
@@ -78,18 +78,18 @@ NLH 200 BTN 3/7/10	;Big Blind is 200, Small Blind is 100, Seat #3 is the dealer,
 5=10B			;BB has 2000 chips
 6=12B			;UTG has 2400 chips
 #P			;Preflop, start of the game
-6:R3B			;UTG raises 3 big blinds
-4:RA			;SB raises 6 big blinds and is all-in
-5:C			;BB calls 6 big blinds
-6:C			;UTG calls 6 big blinds
+6:R3B			;UTG raises 3 big blinds, bet is 800 (blinds posted + raise of 600)
+4:RA			;SB raises all-in, bet is 1200
+5:C			;BB calls 1000 (bet - blind already posted)
+6:C			;UTG calls 400 (bet - 800 chips already posted)
 #F[7h2h5s]		;Flop goes 7h 2h 5s
 5:C			;BB checks
-6:RA			;UTG raises 6 big blinds and is all-in
-5:X			;BB folds
+6:RA			;UTG raises 6 big blinds and is all-in, creating a side-pot
+5:X			;BB folds, UTG's last bet is returned and side-pot is cancelled
 #T[5d]			;Turn goes 5d, board is 7h 2h 5s 5d
 #R[4d]			;River goes 4d, board is 7h 2h 5s 5d 4d
 #S			;Showdown
-6 WIN P			;UTG is awarded pot worth 4400
+6 WIN P			;UTG is awarded pot worth 3600
 6[QdAh]PA+AQ		;UTG shows Qd Ah - hand is pair with Ace and Queen kickers
 5[JdAc]PA+AJ		;BB shows Jd Ac - hand is pair with Ace and Jack kickers
 ```
