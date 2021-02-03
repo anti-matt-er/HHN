@@ -154,7 +154,7 @@ STREETS
 	- *Must* be followed by the monetary `<Amount>` of the buy-in including decimal point
 	- *May* be followed by a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#Active_codes) `[Currency]` code
 		- `[Currency]` required if game is tournament
-		- If `[Currency]` is present and the `CASH` tag is not, this indicates a cash game (to save specifying the currency twice)
+		- If `CASH` tag is not present, `[Currency]` is required and indicates a cash game (to save specifying the currency twice)
 - `INFO` denotes any information about the game that does not have a bearing on how the hand is played, followed by any text
 	- `<Info>` *must* be surrounded by double quotes and can contain any text
 
