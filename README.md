@@ -37,7 +37,7 @@ NLH 200 BTN 3/7/10
 #F[7h2h5s] 5:C 6:RA 5:X
 #T[5d]
 #R[4d]
-#S 6 WIN P 6[QdAh]PA+AQ 5[JdAc]PA+AJ
+#S 6 WIN P 6[QdAh]PA+AQ 4[JdAc]PA+AJ
 ```
 
 **Example 2**
@@ -61,7 +61,7 @@ BTN=3210 SB=6B BB=2000 UTG=12B UTG+1=8B199 HJ=9B25 CO=4045
 UTG:R3B UTG+1:X HJ:X CO:X BTN:X SB:RA BB:C UTG:C
 
 #Flop[7♥ 2♥ 5♠]
-BB:C UTG:RA BB:X UTG[Q♦ A♥] BB[J♦ A♣]
+BB:C UTG:RA BB:X UTG[Q♦ A♥] SB[J♦ A♣]
 
 #Turn[5♦]
 
@@ -91,7 +91,7 @@ NLH 200 BTN 3/7/10	;Big Blind is 200, Small Blind is 100, Seat #3 is the dealer,
 #S			;Showdown
 6 WIN P			;UTG is awarded pot worth 3600
 6[QdAh]PA+AQ		;UTG shows Qd Ah - hand is pair with Ace and Queen kickers
-5[JdAc]PA+AJ		;BB shows Jd Ac - hand is pair with Ace and Jack kickers
+4[JdAc]PA+AJ		;SB shows Jd Ac - hand is pair with Ace and Jack kickers
 ```
 
 ## Specification
